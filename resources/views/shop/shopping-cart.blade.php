@@ -36,7 +36,12 @@ Shopping Cart
 		</div>
 		<div class="row">
 			<div class="col-sm-6 col-md-6 col-md-offset col-sm-offset-3">
-				 <a href=" {{route('checkout') }} " type="button" class="btn btn-success" >Checkout</a>
+				@if(Auth::check())
+					<a href=" {{route('checkout') }} " type="button" class="btn btn-success" >Checkout</a> 
+				@else
+					<a class="btn btn-success" href=" {{ route('user.signin') }} "> Please Login To Purchase</a> 
+				@endif
+					
 			</div>
 		</div>
 	@else

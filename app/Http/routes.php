@@ -27,15 +27,19 @@ Route::get('shopping-cart', [
 	'as' => 'product.shoppingCart'
 ]);
 
-Route::get('checkout', [
-	'uses' => 'ProductController@getCheckout',
-	'as' => 'checkout'
-] );
+Route::group(['middleware' => 'auth'], function(){
 
-Route::post('checkout', [
-	'uses' => 'ProductController@postCheckout',
-	'as' => 'checkout'
-] );
+	Route::get('checkout', [
+		'uses' => 'ProductController@getCheckout',
+		'as' => 'checkout'
+	] );
+
+	Route::post('checkout', [
+		'uses' => 'ProductController@postCheckout',
+		'as' => 'checkout'
+	] );
+
+});
 
 Route::group(['prefix' => 'user'] , function(){
 	

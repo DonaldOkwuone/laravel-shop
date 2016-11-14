@@ -20,6 +20,7 @@
 			<input type="submit" value="Sign In" class="btn btn-primary">
 			 
 			{{ csrf_field() }}
+			<p> <a href=" {{route('user.signup')}} ">Don't have an account? sign in here</a> </p>
 		</form>
 	</div>
 </div>

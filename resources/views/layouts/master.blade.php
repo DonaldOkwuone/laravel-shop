@@ -20,12 +20,13 @@
 @yield('content')
 </div> 
 
-@yield('scripts')
+
 <script src="{{URL::asset('js/jquery.min.js.')}}"></script>
 <script src="{{URL::asset('js/jquery.min.js')}}"></script>
 <script src="{{URL::asset('js/bootstrap.min.js')}}"></script>
 <script src="https://use.fontawesome.com/d6f75a1460.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{URL::asset('js/ie10-viewport-bug-workaround.js.download')}}"></script>
+@yield('scripts')
 </body>	
 </html>
