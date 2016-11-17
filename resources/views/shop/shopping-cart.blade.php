@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-Shopping Cart
+ View your Shopping Cart
 @endsection
 
 @section('content')

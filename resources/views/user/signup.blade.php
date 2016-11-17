@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+Sign up to use this tool
+@endsection
 @section('content')
 <div class="row">
 	<div class="col-md-4 col-md-offset-4">
@@ -11,11 +14,11 @@
 		<form action="{{route('user.signup')}}" method="post">
 			<div class="form-group">
 				<label for="email">Email</label>
-				<input class="form-control" id="email" name="email" type="email">
+				<input class="form-control" id="email" name="email" type="email" required>
 			</div>
 			<div class="form-group">
 				<label for="password">Password</label>
-				<input class="form-control" id="password" type="password" name="password" >
+				<input class="form-control" id="password" type="password" name="password" required>
 			</div>
 			<input type="submit" value="submit" class="btn btn-primary">
 			 
