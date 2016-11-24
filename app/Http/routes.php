@@ -21,6 +21,15 @@ Route::get('add-to-cart/{id}', [
 	'as' => 'product.addToCart'
 ]);
 
+Route::get('remove-item/{id}', [
+	'uses' => 'ProductController@getRemoveItem',
+	'as' => 'product.removeItem'
+]);
+
+Route::get('reduce/{id}', [
+	'uses' => 'ProductController@getReduceByOne',
+	'as' => 'product.reduceByOne'
+]);
 
 Route::get('shopping-cart', [
 	'uses' => 'ProductController@getCart',

@@ -3,14 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>@yield('title')</title>
-		   @yield('styles')
+	@yield('styles')
 	<!-- Bootstrap core CSS -->
     <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="{{URL::asset('css/internet_explorer.css')}}" rel="stylesheet">
-	 <!-- Custom styles for this template -->
-    <!-- Font Awesome Icons -->
-	
+    <!-- Font Awesome Icons --> 
 	<link rel="stylesheet" href="{{URL::asset('css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{URL::asset('css/app.css')}}">
 </head>
